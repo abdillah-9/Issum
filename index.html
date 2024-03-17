@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/07e76d5c47.js"
+        crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="fontawsome/css/all.css"/>
+      <meta charset="utf-8"/>
+      <meta http-equiv="refresh" content="1000000"/>
+      <meta name="viewport" content="width = device-width,initial-scale=1.0"/>
+      <title>ISSUM.com</title>
+        <style>
+            *{
+                box-sizing: border-box;text-decoration: none;
+                    font-family: Verdana, Geneva, Tahoma, serif;
+                    z-index: 1;position: relative;
+                    letter-spacing: 0.07vw;
+                    word-spacing: 0.3vw;
+            }
+            body,html{
+                padding: 0px;
+                margin: 0px;
+                overflow-x: hidden;
+                background-color: white;
+                scroll-behavior: smooth;
+            }
+            .Home_Parent{
+                background-color: rgba(0, 4, 17, 0.76);
+                z-index: 2;
+            }
+            .top h3, .tp h3{
+                font-size: 2.3vw;
+                margin: 5vw 0px 0px 0px;
+                color: rgb(54, 116, 248);
+                font-weight: normal;
+            }
+            .top p, .tp p{
+                color: rgb(92, 105, 116);
+                font-size: 1.5vw;
+            }
+            .indexPic{
+                position: fixed;
+                width: 100%;
+                top:0vw;
+                height: 100vh;
+                z-index: 0;
+            }
+            .Home{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .Home h1{
+                font-size: 10vw;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                letter-spacing: 1vw;
+                margin: 0px;
+                padding: 0px;
+                background: linear-gradient(to right, rgb(179, 97, 4) 40% , rgb(6, 164, 204) 60%);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+
+            }
+            .Home img{
+                width: 5svw;
+                height: 5vw;
+                border-radius: 5%;
+                position: absolute;
+                left: 1vw;
+                top: 1vw;
+                display: none;
+            }
+            .Home p{
+                font-size: 2vw;
+                letter-spacing: 0.3vw;
+                word-spacing: 0.8vw;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                margin: 0px;
+                padding: 1vw 0px 0.5vw 0px;
+                border-bottom: 2px solid rgb(126, 146, 163);
+                color: rgb(123, 145, 165);
+            }
+            nav{
+                display:  flex;
+                z-index: 2;
+                justify-content: space-between;
+                padding: 2vw 2vw 2vw 10vw;
+                background-color: rgb(8, 39, 107);
+                color: white;
+                background: 
+                linear-gradient(to right, rgb(179, 97, 4) 40% , rgb(6, 164, 204) 60%);
+                position: sticky;
+                top: 0px;
+                width: 100vw;
+                height: fit-content;
+            }
+            nav div{
+                border: 1px solid white;
+                border-radius: 15px;
+                padding: 0vw;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+            }
+            nav div a{
+                color: aliceblue;
+                padding: 1.2vw;
+                font-size: 2vw;
+            }
+            nav div a:hover{
+                border-bottom: 5px solid aliceblue;
+                border-radius: 15px;
+                background-color: rgba(166, 168, 170, 0.493);
+            }
+            nav section {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            .fa-bars{
+                display: none;
+            }
+
+            #home, #intro, #about, #services, #team, #works, #contscts{
+                animation: links 3s 2s;
+            }
+            .Intro .top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: white;                
+            }
+            .Intro .bottom{
+                display: flex;
+                flex-direction: row;
+                height: fit-content;
+                width: 100%;
+                padding: 1vw 6.5vw;
+                justify-content: space-between;
+                background-color: white;                  
+            }
+            .Intro .bottom div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 30%;
+                text-align: center;
+            }
+            .Intro .bottom i{
+                font-size: 5vw;
+            }
+            .Intro .bottom p{
+                font-size: 1.3vw;
+            }
+            .Intro .bottom span{
+                font-size: 1vw;
+            }
+            .Intro .bottom #pic{
+                width: 100%;
+                height: 100%;
+            }
+            .transparent_background{
+                width: 100%;
+                height:40vw;
+                font-size: 2.8vw;
+                color: aliceblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(22, 80, 161, 0.5);
+            }
+            .transparent_background span{
+                color: rgb(7, 7, 82);
+            }
+            .transparent_background p{
+                text-align: center;
+            }
+            .about{
+                padding-bottom: 4vw;
+                background-color: white;
+            }
+            .about section{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .about .middle{
+                display: flex;
+                justify-content: space-between;
+                padding: 4.5vw 6vw;
+            }
+            .about .middle div{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                width: 20%;
+            }
+            .about .middle p{
+                font-weight: bold;
+                font-size: 1.25vw;
+                color: rgb(55, 57, 61);
+            }
+            .about .middle span{
+                font-weight: normal;
+                font-size: 1.1vw;
+                color: rgb(92, 105, 116);
+            }
+            .about .middle i{
+                font-size: 3.5vw;
+            }
+            .about .bottom{
+                background-color: rgb(245, 245, 245);
+                height: fit-content;
+                display: flex;
+                align-items: flex-start;
+                padding-bottom: 5vw;
+            }
+            .about .bottom div{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 50%;
+                padding-left: 0vw;
+            }
+            .about .bottom h3{
+                font-weight: normal;
+                font-size: 1.5vw;
+                color: rgb(55, 57, 61);
+                border-bottom: 1px solid rgb(55, 57, 61);
+                padding-bottom: 1vw;
+            }
+            .about .bottom p{
+                font-size: 1.1vw; 
+                color: rgb(53, 74, 99);   
+                margin: 1vw 0px 0.5vw 0px;            
+            }
+            .about .bottom span{
+                background-color: rgb(54, 116, 248);
+                width: 80%;
+                height: 1vw;
+                margin-bottom: 1vw;
+            }
+            .about .bottom video{
+                width: 100%;
+                height: 20vw;
+                position: relative;
+                right: 3.7vw;
+            }
+            .services{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+            }
+            .services .tp{
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+            }
+            .services .top{
+                display: flex;
+                flex-direction: row;
+                border-bottom: 3px solid rgb(11, 50, 179);
+                justify-content:space-between;
+                padding: 0vw 4vw;
+                width: 87.5%;
+                margin-top: 5vw;
+            }
+            .services .top div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3vw 2vw;
+                text-align: center;
+                border-radius: 15px 15px 0px 0px;
+                color: rgb(7, 7, 82)
+            }
+
+            .services .top .first{
+                animation: moja 40s infinite;
+            }
+            @keyframes moja{
+                0%{
+                    background-color: white;
+                }
+                5%{
+                    background-color: rgb(54, 116, 248);
+                }
+                20%{
+                    background-color: rgb(54, 116, 248);
+                }
+                25%{
+                    background-color: white;
+                }
+                100%{
+                    background-color: white;
+                }
+            }
+            .services .top .second{
+                animation: mbili 40s infinite;
+            }
+            @keyframes mbili{
+                0%{
+                    background-color: white;
+                }
+                20%{
+                    background-color: white;
+                }
+                25%{
+                    background-color: rgb(54, 116, 248);
+                }
+                45%{
+                    background-color: rgb(54, 116, 248);
+                }
+                50%{
+                    background-color: white;
+                }
+                100%{
+                    background-color: white;
+                }
+            }
+            .services .top .third{
+                animation: tatu 40s infinite;
+            }
+            @keyframes tatu{
+                0%{
+                    background-color: white;
+                }
+                45%{
+                    background-color: white;
+                }
+                50%{
+                    background-color: rgb(54, 116, 248);
+                }
+                70%{
+                    background-color: rgb(54, 116, 248);
+                }
+                75%{
+                    background-color: white;
+                }
+                100%{
+                    background-color: white;
+                }
+            }
+            .services .top .forth{
+                animation: nne 40s infinite;
+            }
+            @keyframes nne{
+                0%{
+                    background-color: rgb(54, 116, 248);
+                }
+                5%{
+                    background-color: white;
+                }
+                70%{
+                    background-color: white;
+                }
+                75%{
+                    background-color: rgb(54, 116, 248);                                    
+                }
+                100%{
+                    background-color: rgb(54, 116, 248);
+                }
+            }
+            .services .top div p{
+                font-size: 1.2vw;
+                color: rgb(12, 52, 88)              
+            }
+            .services .top icon{
+                border: 2px solid rgb(11, 50, 179);
+                background-color: white;
+                padding: 1vw;
+                border-radius: 20%;
+                color: rgb(54, 116, 248);
+            }
+            .services .slide{
+                display: flex;
+                justify-content: space-between;
+                padding: 2vw 2.5vw;
+            }
+            .services .slide div{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .services .slide div h2{
+                font-weight: normal;
+                font-size: 2vw;
+            }
+            .services .slide div p{
+                text-align: left;
+            }
+            .services .bottom{
+                height: 34vw;
+            }
+            .services .bottom .first{
+                animation: one 40s infinite;
+            }
+            @keyframes one{
+                0%{
+                    opacity: 0;
+                }
+                5%{
+                    opacity: 1;
+                }
+                20%{
+                    opacity: 1;
+                }
+                25%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            .services .bottom .second{
+                animation: two 40s infinite;
+                position: relative;
+                top: -34vw;
+            }
+            @keyframes two{
+                0%{
+                    opacity: 0;
+                }
+                20%{
+                    opacity: 0;
+                }
+                25%{
+                    opacity: 1;
+                }
+                45%{
+                    opacity: 1;
+                }
+                50%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            .services .bottom .third{
+                animation: three 40s infinite;
+                position: relative;
+                top: -68vw;
+            }
+            @keyframes three{
+                0%{
+                    opacity: 0;
+                }
+                45%{
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 1;
+                }
+                70%{
+                    opacity: 1;
+                }
+                75%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            .services .bottom .forth{
+                animation: four 40s infinite;
+                position: relative;
+                top: -102vw;
+            }
+            @keyframes four{
+                0%{
+                    opacity: 1;
+                }
+                5%{
+                    opacity: 0;
+                }
+                70%{
+                    opacity: 0;
+                }
+                75%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+
+            .services .bottom{
+                display: flex;
+                flex-direction: column;
+            }
+            .services .bottom img{
+                width: 45%;
+                height: 30vw;
+                border-radius: 15px;
+            }
+            .team{
+                padding: 2.5vw 3.5vw;
+                margin: 20vw 0px;
+                border-radius: 15px;
+            }
+            .team .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 3vw 0px;
+                border-radius: 15px 15px 0px 0px;
+            }
+            .team .bottom{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 3vw;
+                border-radius: 0px 0px 15px 15px;               
+            }
+            .team .bottom div{
+              width: 20%;
+              height: 20vw;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border: 2px solid rgb(54, 116, 248);
+              border-radius: 5px 5px 15px 15px;
+            }
+            .team .bottom div img{
+                width: 100%;
+                height: 15vw;
+                border-radius: 5px 5px 0px 0px;
+            }
+            .team .bottom .info{
+                background-color: rgb(54, 116, 248);
+                border-radius: 5px 15px;
+                padding: 1vw;
+                color: white;
+                opacity: 0;
+                width: 85%;
+                position: relative;
+                top: -17vw;
+            }
+            .team .bottom div:hover .info{
+                animation: team 1.5s;
+                opacity: 1;
+            }
+            @keyframes team{
+                0%{
+                    opacity: 0;
+                    transform: rotateY(180deg);
+                }
+                100%{
+                    opacity: 1;
+                    transform: rotateY(360deg);
+                }
+            }
+            .team .bottom span{
+                padding: 1vw;
+                color: rgba(90,90,90,1);
+                font-size: 1.3vw;
+            }
+            .works{
+                padding: 2vw 0px;
+                background-color: aliceblue;
+            }
+            .works .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 2vw 0px;
+            }
+            .works .bottom{
+                background-color: rgb(54, 116, 248);
+                display: flex;
+                flex-direction: column;
+                height: 50vw;
+            }
+            .works .bottom div{
+                display: flex;
+                flex-direction: column;
+                color: aliceblue;
+                text-align: center;
+                align-items: center;
+                padding: 3vw 15vw;
+                height: 27vw;
+                width: 100%;
+            }
+            .works .bottom .first{
+                animation: first 15s infinite;
+                position: relative;
+            }
+            @keyframes first{
+                0%{
+                    right: 90vw;
+                }
+                5%{
+                    right: 0vw;
+                }
+                50%{
+                    right: 0vw;
+                }
+                51%{
+                    right: 0vw;
+                }
+                55%{
+                    right: -90vw;
+                }
+                100%{
+                    right: -90vw;
+                }
+            }
+            .works .bottom .second{
+                animation: second 15s infinite;
+                position: relative;
+                top: -27vw;
+            }
+            @keyframes second{
+                0%{
+                    right: 0vw;
+                }
+                5%{
+                    right: 90vw;
+                }
+                50%{
+                    right: 90vw;
+                }
+                51%{
+                    right: 90vw;
+                }
+                55%{
+                    right: 0vw;
+                }
+                100%{
+                    right: 0vw;
+                }
+            }
+            .works .bottom img{
+                width: 10vw;
+                height: 10vw;
+                border-radius: 50%;
+                border: 1px solid whitesmoke;
+            }
+            .works .bottom h3{
+                color: rgb(11, 50, 179);
+                font-size: 2vw;
+                margin: 1vw;
+            }
+            .works .bottom span{
+                color: rgb(178, 201, 230);
+                font-size: 1.3vw;
+            }
+            .contacts{
+                padding: 4vw 0px 0px 0px;
+                background-color: white;
+            }
+            .contacts .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 2.5vw 0px;
+            }
+            .contacts .bottom{
+                background-color: rgb(54, 116, 248);
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px;
+            }
+            .contacts .bottom div{
+                padding: 2vw 1vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                right: 3vw;
+            }
+            .contacts .bottom div icon{
+                border: 1px solid wheat;
+                padding: 0.5vw;
+                width: fit-content;
+                border-radius: 15px;
+                font-size: 3vw;
+            }
+            .contacts .bottom div b, .contacts .bottom div span{
+                padding: 1vw;
+                font-size: 1vw;
+            }
+
+            /* Responsiveness for devices with small screens */
+
+            @media screen and (max-width: 650px) and (min-width: 100px){
+            .top h3, .tp h3{
+                font-size: 7vw;
+                margin: 5vw 0px 0px 0px;
+            }
+            .top p, .tp p{
+                font-size: 4vw;
+                text-align: center;
+            }
+            .Home h1{
+                font-size: 20vw;
+                margin: 7vw 0px;
+            }
+            .Home p{
+                font-size: 5vw;
+            }
+            nav{
+                    padding: 2vw;
+                }
+                nav div{
+                    display: none;
+                }
+                nav i{
+                    font-size: 4vw;
+                    cursor: pointer;
+                }
+                .fa-bars{
+                    display: block;
+                }
+                .showLinks{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 70%;
+                    position: relative;
+                    right: 16vw;
+                }
+                nav div a{
+                    font-size: 3.5vw;
+                    margin: 1vw 0px;
+                    padding: 2vw;
+                    width: 100%;
+                    text-align: center;     
+                }
+            .Intro .top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: white;                
+            }
+            .Intro .bottom{
+                flex-direction: column;
+                padding: 3vw;
+                justify-content: center;
+                align-items: center;                  
+            }
+            .Intro .bottom div{
+                width: 100%;
+            }
+            .Intro .bottom i{
+                font-size: 10vw;
+            }
+            .Intro .bottom p{
+                font-size: 4vw;
+            }
+            .Intro .bottom span{
+                font-size: 3.5vw;
+            }
+            .Intro .bottom #pic{
+                width: 90%;
+                height: 50%;
+                margin-bottom: 12vw;
+            }
+            .transparent_background{
+                font-size: 4.5vw;
+                padding:2vw;
+                height: 60vw;
+                line-height: 7vw;
+            }
+            .transparent_background span{
+                color: rgb(7, 7, 82);
+            }
+            .transparent_background p{
+                text-align: center;
+            }
+            .about{
+                padding-bottom: 4vw;
+                background-color: white;
+            }
+            .about section{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            
+            }
+            .about .middle{
+                padding: 4.5vw 6vw;
+            }
+            .about .middle div{
+                width: 100%;
+                padding: 7vw 0px;
+            }
+            .about .middle p{
+                font-size: 4vw;
+            }
+            .about .middle span{
+                font-size: 3.1vw;
+            }
+            .about .middle i{
+                font-size: 7.5vw;
+            }
+            .about .bottom{
+                background-color: rgb(245, 245, 245);
+                height: fit-content;
+                display: flex;
+                align-items: flex-start;
+                padding:0px 0px 5vw 6vw;
+            }
+            .about .bottom div{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                padding-left: 0vw;
+            }
+            .about .bottom h3{
+                font-weight: normal;
+                font-size: 3.5vw;
+                color: rgb(55, 57, 61);
+                border-bottom: 1px solid rgb(55, 57, 61);
+                padding-bottom: 1vw;
+            }
+            .about .bottom p{
+                font-size: 3vw;  
+                margin: 1vw 0px 0.5vw 0px;            
+            }
+            .about .bottom span{
+                width: 80%;
+                height: 1vw;
+                margin-bottom: 1vw;
+            }
+            .about .bottom video{
+                width: 100%;
+                height: 47vw;
+            }
+            .services{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+            }
+            .services .tp{
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+            }
+            .services .top{
+                display: flex;
+                flex-direction: row;
+                border-bottom: 3px solid rgb(11, 50, 179);
+                justify-content:space-between;
+                padding: 0vw 4vw;
+                width: 87.5%;
+                margin-top: 5vw;
+            }
+            .services .top div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3vw 2vw;
+                text-align: center;
+                border-radius: 15px 15px 0px 0px;
+                color: rgb(7, 7, 82)
+            }
+
+            .services .top .first{
+                animation: moja 40s infinite;
+            }
+            @keyframes moja{
+                0%{
+                    background-color: white;
+                }
+                5%{
+                    background-color: rgb(54, 116, 248);
+                }
+                20%{
+                    background-color: rgb(54, 116, 248);
+                }
+                25%{
+                    background-color: white;
+                }
+                100%{
+                    background-color: white;
+                }
+            }
+            .services .top .second{
+                animation: mbili 40s infinite;
+            }
+            @keyframes mbili{
+                0%{
+                    background-color: white;
+                }
+                20%{
+                    background-color: white;
+                }
+                25%{
+                    background-color: rgb(54, 116, 248);
+                }
+                45%{
+                    background-color: rgb(54, 116, 248);
+                }
+                50%{
+                    background-color: white;
+                }
+                100%{
+                    background-color: white;
+                }
+            }
+            .services .top .third{
+                animation: tatu 40s infinite;
+            }
+            @keyframes tatu{
+                0%{
+                    background-color: white;
+                }
+                45%{
+                    background-color: white;
+                }
+                50%{
+                    background-color: rgb(54, 116, 248);
+                }
+                70%{
+                    background-color: rgb(54, 116, 248);
+                }
+                75%{
+                    background-color: white;
+                }
+                100%{
+                    background-color: white;
+                }
+            }
+            .services .top .forth{
+                animation: nne 40s infinite;
+            }
+            @keyframes nne{
+                0%{
+                    background-color: rgb(54, 116, 248);
+                }
+                5%{
+                    background-color: white;
+                }
+                70%{
+                    background-color: white;
+                }
+                75%{
+                    background-color: rgb(54, 116, 248);                                    
+                }
+                100%{
+                    background-color: rgb(54, 116, 248);
+                }
+            }
+            .services .top div p{
+                font-size: 2vw;
+                color: rgb(12, 52, 88); 
+                display: none;  
+            }
+            .services .top icon{
+                border: 2px solid rgb(11, 50, 179);
+                background-color: white;
+                padding: 2vw;
+                border-radius: 20%;
+                color: rgb(54, 116, 248);
+                font-size: 8vw;
+            }
+            .services .bottom{
+                height: 90vw;
+                display: flex;
+                flex-direction: row;
+                
+            }
+            .services .slide{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2vw;
+            }
+            .services .slide div{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .services .slide div h2{
+                font-size: 4vw;
+                color: rgb(73, 126, 172)
+            }
+            .services .slide div p{
+                text-align: left;
+                font-size: 3vw;
+                line-height: 5vw;
+            }
+            .services .bottom .first{
+                animation: one 40s infinite;
+                position: relative;
+                top: 120vw;
+            }
+            @keyframes one{
+                0%{
+                    opacity: 0;
+                }
+                5%{
+                    opacity: 1;
+                }
+                20%{
+                    opacity: 1;
+                }
+                25%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            .services .bottom .second{
+                animation: two 40s infinite;
+                position: relative;
+                top: 33.5vw;
+            }
+            @keyframes two{
+                0%{
+                    opacity: 0;
+                }
+                20%{
+                    opacity: 0;
+                }
+                25%{
+                    opacity: 1;
+                }
+                45%{
+                    opacity: 1;
+                }
+                50%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            .services .bottom .third{
+                animation: three 40s infinite;
+                position: relative;
+                top: -53vw;
+            }
+            @keyframes three{
+                0%{
+                    opacity: 0;
+                }
+                45%{
+                    opacity: 0;
+                }
+                50%{
+                    opacity: 1;
+                }
+                70%{
+                    opacity: 1;
+                }
+                75%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            .services .bottom .forth{
+                animation: four 40s infinite;
+                position: relative;
+                top: -134vw;
+            }
+            @keyframes four{
+                0%{
+                    opacity: 1;
+                }
+                5%{
+                    opacity: 0;
+                }
+                70%{
+                    opacity: 0;
+                }
+                75%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+            .services .bottom{
+                display: flex;
+                flex-direction: column;
+            }
+            .services .bottom img{
+                width: 100%;
+                height: 50vw;
+                border-radius: 15px;
+            }
+            .team{
+                padding: 2.5vw 3.5vw;
+                margin: 20vw 0px;
+                border-radius: 15px;
+            }
+            .team .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 3vw 1vw;
+                border-radius: 15px 15px 0px 0px;
+            }
+            .team .bottom{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 3vw;
+                border-radius: 0px 0px 15px 15px;               
+            }
+            .team .bottom div{
+              width: 60%;
+              height: 50vw;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin: 2.5vw;
+            }
+            .team .bottom div img{
+                width: 100%;
+                height: 40vw;
+                border-radius: 5px 5px 0px 0px;
+            }
+            .team .bottom .info{
+                background-color: rgb(54, 116, 248);
+                border-radius: 5px 15px;
+                padding: 1vw;
+                color: rgb(232, 235, 236);
+                opacity: 0;
+                width: 85%;
+                position: relative;
+                top: -45vw;
+                font-size: 3.5vw;
+            }
+            .team .bottom div:hover .info{
+                animation: team 1.5s;
+                opacity: 1;
+            }
+            @keyframes team{
+                0%{
+                    opacity: 0;
+                    transform: rotateY(180deg);
+                }
+                100%{
+                    opacity: 1;
+                    transform: rotateY(360deg);
+                }
+            }
+            .team .bottom span{
+                padding: 1vw;
+                color: rgba(90,90,90,1);
+                font-size: 3.5vw;
+            }
+            .works{
+                padding: 2vw;
+                background-color: aliceblue;
+            }
+            .works .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 2vw 0px;
+            }
+            .works .bottom{
+                background-color: rgb(54, 116, 248);
+                display: flex;
+                flex-direction: column;
+                height: 65vw;
+            }
+            .works .bottom div{
+                padding: 2.8vw;
+                height: 60vw;
+                width: 100%;
+            }
+            .works .bottom p{
+                font-size: 3vw;
+            }
+            .works .bottom .first{
+                animation: first 15s infinite;
+                position: relative;
+                top: 25vw;
+            }
+            @keyframes first{
+                0%{
+                    right: 90vw;
+                }
+                5%{
+                    right: 0vw;
+                }
+                50%{
+                    right: 0vw;
+                }
+                51%{
+                    right: 0vw;
+                }
+                55%{
+                    right: -90vw;
+                }
+                100%{
+                    right: -90vw;
+                }
+            }
+            .works .bottom .second{
+                animation: second 15s infinite;
+                position: relative;
+                top: -32vw;
+            }
+            @keyframes second{
+                0%{
+                    right: 0vw;
+                }
+                5%{
+                    right: 90vw;
+                }
+                50%{
+                    right: 90vw;
+                }
+                51%{
+                    right: 90vw;
+                }
+                55%{
+                    right: 0vw;
+                }
+                100%{
+                    right: 0vw;
+                }
+            }
+            .works .bottom img{
+                width: 20vw;
+                height: 20vw;
+                border-radius: 50%;
+                border: 1px solid whitesmoke;
+            }
+            .works .bottom h3{
+                color: rgb(11, 50, 179);
+                font-size: 4vw;
+                margin: 1vw;
+            }
+            .works .bottom span{
+                color: rgb(178, 201, 230);
+                font-size: 3.3vw;
+            }
+            .contacts{
+                padding: 4vw 0px 0px 0px;
+                background-color: white;
+            }
+            .contacts .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 2.5vw 0px;
+            }
+            .contacts .bottom{
+                background-color: rgb(54, 116, 248);
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                padding: 1vw;
+            }
+            .contacts .bottom div{
+                padding: 8vw 1vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                right: 3vw;
+            }
+            .contacts .bottom div icon{
+                border: 1px solid wheat;
+                padding: 2vw;
+                width: fit-content;
+                border-radius: 15px;
+                font-size: 8vw;
+            }
+            .contacts .bottom div b, .contacts .bottom div span{
+                padding: 2vw;
+                font-size: 3vw;
+            }
+            }
+        </style>
+
+    </head>
+    <body>
+        <section class="Home_Parent">
+        <sectyion id="home" class="Home">
+            <h1>I-SSUM</h1>
+            <img src="issum.jpg"/>
+            <p>Electrical & Technical Solution</p>
+        </sectyion>
+    </section>
+    <nav>       
+        <i onclick="clicked()" class="fas fa-bars"></i>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#intro">Intro</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#team">Team</a>
+            <a href="#works">Works</a>
+            <a href="#contacts">Contacts</a>
+        </div>
+        </nav>
+    <section id="intro" class="Intro">
+       <section class="top"> 
+        <h3>HELLOW & WELCOME</h3>
+        <p>- EXPLORE OUR WORLD -</p>
+       </section>
+       <section class="bottom">
+        <div>
+            <i class="fas fa-hard-hat"></i>
+            <p>
+                WE MEET DEADLINES
+            </p>
+            <span>
+                Your deadline is the most important 
+                value for us. Our job is to make sure the job is
+                 done perfectly before the deadline.
+            </span>
+        </div>
+        <div>  
+            <img id="pic" src="issum.jpg"></img>
+        </div>
+        <div>
+            <i class="fas fa-users-cog"></i>
+            <p>
+                WE MEET DEADLINES
+            </p>
+            <span>
+                Your deadline is the most important 
+                value for us. Our job is to make sure the job is
+                 done perfectly before the deadline.
+            </span>
+        </div>
+       </section>
+       <section class="transparent_background">
+        <p>
+            We make our <span>work look good</span> & have experience
+            in weaving,troubleshooting & maintenance of 
+            <span>electrical systems</span>
+        </p>
+       </section>
+       <section id="about" class="about">
+            <section class="top">
+                <h3>
+                    ABOUT ISSUM
+                </h3>
+                <p>
+                   - OUR GOAL IS TO PROVIDE SPACTACULAR ELECTRICAL SERVICES -
+                </p>
+            </section>
+            <section class="middle">
+                <div>
+                    <i class="fas fa-tools"></i>
+                    <p>WEAVING NEW ELECTRICAL SYSTEM</p>
+                    <span>
+                        Our approach to website design is to 
+                        create a website that strengthens your
+                         company’s brand while ensuring ease 
+                         of use and simplicity for your audience
+                        </span>
+                </div>
+                <div>
+                    <i class="fas fa-pencil-ruler"></i>
+                    <p>ELECTRICAL SYSTEM DESIGNING</p>
+                    <span>
+                        Our approach to website design is to 
+                        create a website that strengthens your
+                         company’s brand while ensuring ease 
+                         of use and simplicity for your audience
+                        </span>
+                </div>
+                <div>
+                    <i class="fas fa-toolbox"></i>
+                    <p>ELECTRICAL SYSTEM TROUBLESHOOTING</p>
+                    <span>
+                        Our approach to website design is to 
+                        create a website that strengthens your
+                         company’s brand while ensuring ease 
+                         of use and simplicity for your audience
+                        </span>
+                </div>
+                <div>
+                    <i class="fas fa-screwdriver"></i>
+                    <p>ELECTRICAL SYSTEM MAINTENANCEB</p>
+                    <span>
+                        Our approach to website design is to 
+                        create a website that strengthens your
+                         company’s brand while ensuring ease 
+                         of use and simplicity for your audience
+                        </span>
+                </div>
+            </section>
+            <section class="bottom">
+                <div>
+                    <h3>INTRODUCTION VIDEO</h3>
+                    <video src="1.mkv" autoplay muted></video>
+                </div>
+                <div>
+                    <h3>SKILLS WE GOT</h3>
+                    <p>ELECTRICAL SYSTEM DESIGN:</p>
+                    <span></span>
+                    <p>ELECTRICAL SYSTEM WEAVING:</p>
+                    <span></span>
+                    <p>ELECTRICAL SYSTEM TROUBLESHOOTING:</p>
+                    <span></span>
+                    <p>ELECTRICAL SYSTEM MAINTENANCE:</p>
+                    <span></span>
+                </div>
+            </section>
+       </section>
+       <!--End of about section-->
+       <section id="services" class="services">
+            <section class="tp">
+                <h3>SERVICES WE OFFER</h3>
+                <p>- Look At What We Can Serve To Our Customers -</p>
+            </section>
+            <section class="top">
+                <div class="first">
+                    <icon class="fas fa-screwdriver-wrench"></icon>
+                    <p>Electrical system weaving</p>
+                </div>
+                <div class="second">
+                    <icon class="fas fa-pencil-ruler"></icon>
+                    <p>Electrical system designing</p>
+                </div>
+                <div class="third">
+                    <icon class="fas fa-toolbox"></icon>
+                    <p>Electrical system troubleshooting</p>
+                </div>
+                <div class="forth">
+                    <icon class="fas fa-screwdriver"></icon>
+                    <p>Electrical system maintenance</p>
+                </div>
+            </section>
+            <section class="bottom">
+                <section class="slide first">
+                    <div>
+                        <h2>Electrical Systsem Weaving</h2>
+                        <p>
+                            We are weaving new electric systems in various 
+                            buildings such as residents and company offices
+                            which are easly to be modified and maintained
+                        </p>
+                    </div>
+                    <img src="4.jpg"/>    
+                </section>           
+                <section class="slide second">
+                    <div>
+                        <h2>Electrical Systsem Designing</h2>
+                        <p>
+                            Our professional engineer Suleish is best
+                            in designing high quality system that
+                            minimise costs and ensures best perfomance
+                        </p>
+                    </div>
+                    <img src="3.jpg"/>    
+                </section>           
+                <section class="slide third">
+                    <div>
+                        <h2>Electrical Systsem Troubleshooting</h2>
+                        <p>
+                            This company has special team which is able
+                            identify and solve any deffect in any electric system
+                        </p>
+                    </div>
+                    <img src="5.jpg"/>    
+                </section>           
+                <section class="slide forth">
+                    <div>
+                        <h2>Electrical Systsem Maintenance</h2>
+                        <p>
+                            We are able to improove longevity of electric systems
+                            by serving proper modification
+                        </p>
+                    </div>
+                    <img src="6.jpg"/>    
+                </section>            
+            </section>        
+       </section>   
+        <!--End of services section-->
+        <section id="team" class="team">
+            <section class="top">
+                <h3>OUR TEAM</h3>
+                <p>- THESE ARE TOP TEAM MEMBERS IN OUR COMPANY -</p>
+            </section>
+            <section class="bottom">
+                <div>
+                    <img src="1.jpg"/>
+                    <span>Suleiman Mbombwe</span>
+                    <p class="info">
+                        Some of his description concerning
+                        his identity like age, 
+                        position in the company and so on..
+                    </p>
+                </div>
+                <div>
+                    <img src="3.jpg"/>
+                    <span>Isshaqa Mpogo</span>
+                    <p class="info">
+                        Some of his description concerning
+                        his identity like age, 
+                        position in the company and so on..
+                    </p>
+                </div>
+                <div>
+                    <img src="4.jpg"/>
+                    <span>Masta .......</span>
+                    <p class="info">
+                        Some of his description concerning
+                        his identity like age, 
+                        position in the company and so on..
+                    </p>
+                </div>
+                <div>
+                    <img src="5.jpg"/>
+                    <span>Amita ........</span>
+                    <p class="info">
+                        Some of his description concerning
+                        his identity like age, 
+                        position in the company and so on..
+                    </p>
+                </div>
+            </section>        
+        </section>   
+        <!--End of team section-->
+        <section id="works" class="works">
+            <section class="top">
+                <h3>WORKS & CLIENTS' REVIEWS</h3>
+                <p>- Our Clients Love Us Read What They Have To Say-</p>
+            </section>        
+            <section class="bottom">
+                <div class="first">
+                    <img src="11.jpg"/>
+                    <p>
+                        I have been building alot hotels and residents for 12 years 
+                        and have never worked with such a solid company with such
+                        a wonderful work like this Company.
+                    </p>
+                    <h3>Abdoul Majid</h3>
+                    <span>Business man At Kariakoo</span>
+                </div>
+                <div class="second">
+                    <img src="12.jpg"/>
+                    <p>If there were 100 star rating I would leave 110. Their work
+                        is on next the level
+                    </p>
+                    <h3>Abdoul Hakim</h3>
+                    <span>CEO At ASAS Company</span>
+                </div>
+            </section>
+        </section>   
+        <!--End of works section-->
+        <section id="contacts" class="contacts">
+            <section class="top">
+                <h3>CONTACT US</h3>
+                <p>- Here We Are -</p>
+            </section>
+            <section class="bottom">
+                <div>
+                    <icon class="fab fa-whatsapp"></icon>
+                    <span>WhatsUp</span>
+                    <b>+255 888 888 888</b>
+                    <b>+255 876 543 210</b>
+                </div>
+                <div>
+                    <icon class="fab fa-facebook"></icon>
+                    <span>Facebook</span>
+                    <b>Suleish Roja</b>
+                </div>
+                <div>
+                    <icon class="fa-solid fa-envelope"></icon>
+                    <span>E-mails</span>
+                    <b>suleishroja@gmail.com</b>
+                    <b>issum@gmail.com</b>
+                </div>
+            </section>
+        </section>   
+        <!--End of contacts section-->
+        <img src="5.jpg" class="indexPic"></img>
+    </section>
+                <!--javascript for nav bar-->
+                <script>
+                    function clicked(){
+                        links = document.getElementsByClassName("links")[0];
+                        links.classList.toggle("showLinks");
+                        changeIcon = document.getElementsByClassName("fas")[0];
+                        changeIcon.classList.toggle("fa-minus");
+                    }
+                </script>
+    </body>
+</html>
